@@ -92,6 +92,13 @@ then the class library can be accessed. But most likey the class library is ther
 ________________________________________________________________________________________________
 Type of application pattern:
 MVC (Model View Controller)
+_______________
+Screenshots:
+![1 SignUp](https://user-images.githubusercontent.com/79351812/229384992-4624efb1-bc42-4544-8a7b-64283c6ab0a1.PNG)
+![2 Registration](https://user-images.githubusercontent.com/79351812/229385004-26865c1a-33af-4736-9be1-4f084d532493.PNG)
+![3 Login](https://user-images.githubusercontent.com/79351812/229385011-3e7bf91c-57ff-4d4f-9ef3-2002539fcc0e.PNG)
+![4 Add Modules](https://user-images.githubusercontent.com/79351812/229385014-559f63d6-09db-43fc-a70b-c7e7cf7419bb.PNG)
+![5 My modules](https://user-images.githubusercontent.com/79351812/229385017-9c3641da-c85f-4aba-bab1-13eea52e9321.PNG)
 
 
 
