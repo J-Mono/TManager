@@ -1,0 +1,57 @@
+﻿@model PROG6212_Poe_Joseph_20104412.Models.Student
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_nothing.cshtml";
+}
+<!DOCTYPE html>
+
+<article class="mb-3" style="background-color: black">
+    <div class="card-body text-center">
+        <h3 class="text-white mt-3">TManager</h3>
+    </div>
+    <br><br>
+</article>
+<div id="login">
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12" style=" background-image: url('img/og.jpg');">
+                    <form id="login-form" class="form" action="" method="post">
+                        <h3 class="text-center text-info">Login</h3>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Login" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="register-link" class="text-right">
+                            <a href="@Url.Action("SignUp", "Home")" class="text-info">Sign Up here</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+

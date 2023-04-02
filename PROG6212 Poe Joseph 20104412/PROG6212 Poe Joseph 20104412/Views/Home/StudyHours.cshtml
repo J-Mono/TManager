@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PROG6212_Poe_Joseph_20104412.Models.StudyHours>
+
+@{
+    ViewBag.Title = "StudyHours";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>StudyHours</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.hoursStudied)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.study_hours_required)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hoursStudied)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RemainingStudyHours)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SH_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SH_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SH_ID })
+        </td>
+    </tr>
+}
+
+</table>

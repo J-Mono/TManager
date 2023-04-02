@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title-Time managment app</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Time Manager", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("SignUp", "SignUp", "Home")</li>
+                    <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-center space" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo w3-white">TManager</h1>
+        <p class="w3-xlarge w3-white">Make Time Management Easier with TManager</p>
+        <a href="@Url.Action("SignUp", "Home")" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Sign Up</a>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Time Management Application for students</h1>
+                <h5 class="w3-padding-32">What makes TManager good...yes! the organisation of time consuming tasks for students.</h5>
+
+                <p class="w3-text-grey">
+                    TManager is a local software application that will track down your daily academic activities. It will be able to
+                    store which modules the student is doing. as well as track down the amount of time spent studying, and how much
+                    study time each module will get per week. It will also display which modules the student is doing and how much study time is left after
+                    calculations are made. This is the perfect application for students working long hours on many subjects.
+                </p>
+            </div>
+
+            <div class="w3-third w3-center">
+                <img src="~/Content/img/clocks.jpg" class="w3-padding-64  w3-margin-right" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <img src="~/Content/img/Goals.png" class="w3-padding-64  w3-margin-right" />
+            </div>
+
+            <div class="w3-twothird">
+                <h1>Forget about time management now, focus on the goal</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+        <h1 class="w3-margin w3-xlarge">A Qoute: Lost time is never found again. - Benjamin Franklin</h1>
+    </div>
+
+    <!-- Footer -->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PROG6212_Poe_Joseph_20104412.Models.Modules>
+
+@{
+    ViewBag.Title = "MyModules";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>MyModules</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddModules")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ModuleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Credits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class_Hours_per_week)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nr_of_Weeks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Semester_Start_Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ModuleName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Credits)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Class_Hours_per_week)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nr_of_Weeks)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Semester_Start_Date)
+    </td>
+    <td>
+        @Html.ActionLink("Update", "Update", new { id = item.Module_Code }) |
+        @Html.ActionLink("StudyHours", "ViewStudyHours", new { id = item.Module_Code }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Module_Code })
+    </td>
+</tr>
+}
+
+</table>
