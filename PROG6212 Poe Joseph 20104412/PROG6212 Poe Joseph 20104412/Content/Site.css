@@ -1,0 +1,95 @@
+﻿/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;*/
+    /*background-image: url('img/clocks.jpg');*/
+    /*background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    margin: 0;
+}*/
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.body-content{
+    
+}
+
+.space {
+    background-image: url('img/og.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    margin: 0;
+}
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif
+}
+
+.w3-bar, h1, button {
+    font-family: "Montserrat", sans-serif
+}
+
+.fa-anchor, .fa-coffee {
+    font-size: 200px
+}
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+    .divider-text span {
+        padding: 7px;
+        font-size: 12px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .divider-text:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 1;
+    }
+
+
+#login .container #login-row #login-column #login-box {
+    background-image: url('img/og.jpg');
+    margin-top: 120px;
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
